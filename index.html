@@ -1,39 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reto Hacker</title>
-    <link rel="stylesheet" href="styles.css">
-
+    <title>Desafio Hacker - Nível 1</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Bem-vindo ao Reto Hacker!</h1>
-        <p>Você está pronto para o desafio?</p>
-    </header>
+    <div class="terminal">
+        <h1>🔓 Acesso Restrito</h1>
+        <p>Somente usuários autorizados podem avançar. Descubra a chave para desbloquear o próximo nível.</p>
 
-    <section id="instructions">
-        <h2>Instruções</h2>
-        <p>O objetivo deste desafio é passar por três etapas difíceis para desbloquear a próxima surpresa! Vamos ver até onde você consegue chegar.</p>
-    </section>
+        <input type="text" id="password" placeholder="Digite a chave">
+        <button onclick="checkPassword()">Entrar</button>
 
-    <section id="challenge">
-        <h2>Desafio Hacker</h2>
-        <p>Aqui começa o seu desafio. Complete as etapas para desbloquear a próxima surpresa! Boa sorte!</p>
-        <!-- Aqui você pode adicionar o código do desafio ou a interação que o leva para as etapas -->
-    </section>
+        <p id="message"></p>
+    </div>
 
-    <section id="result">
-        <h2 id="resultMessage">Parabéns! Você conseguiu completar o desafio.</h2>
-        <p>Agora, escolha a sua próxima aventura!</p>
-        <!-- Aqui você pode adicionar o link para as excursões ou próximos passos -->
-    </section>
-
-    <footer>
-        <p>© 2025 Reto Hacker. Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- JavaScript externo -->
 </body>
 </html>
+
