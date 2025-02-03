@@ -1,22 +1,18 @@
-document.addEventListener("DOMContentLoaded", function() {
-    document.addEventListener("contextmenu", event => event.preventDefault()); // Bloquea clic derecho
-    document.addEventListener("keydown", function(event) {
-        if (event.key === "F12" || (event.ctrlKey && event.key === "u")) {
-            event.preventDefault();
-        }
-    });
-});
+// script.js
 
-function checkCode() {
-    var userInput = document.getElementById('userInput').value;
-    var correctCode = atob("aGFja2VyMjAyNQ=="); // "hacker2025" codificado en Base64
+function checkPassword() {
+    let password = document.getElementById("password").value;
 
-    if (userInput === correctCode) {
-        document.getElementById('response').innerHTML = "✅ Acceso permitido! Desbloqueando la excursión...";
-        
-        setTimeout(() => {
-            window.location.href = "excursiones.html"; // Redirige después de 2 segundos
-        }, 2000);
+    // Cambia la clave que consideres correcta para desbloquear el siguiente nivel
+    if (password === "3xpl0it_2025") {
+        // Redirige al siguiente nivel (página de inyección SQL)
+        window.location.href = "nivel2.html";
+    } else {
+        // Muestra un mensaje de error si la clave es incorrecta
+        document.getElementById("message").innerHTML = "⚠️ Acesso negado. Tente novamente.";
+    }
+}
+
     } else {
         document.getElementById('response').innerHTML = "❌ Código incorrecto. Inténtalo de nuevo.";
     }
