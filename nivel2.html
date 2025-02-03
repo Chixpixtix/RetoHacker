@@ -12,6 +12,7 @@
         <p>Vulnerabilidade: Injeção SQL</p>
         <p>Descubra a chave para passar para o próximo nível.</p>
 
+        <!-- Formulário de login vulnerable a injeção SQL -->
         <form id="login-form">
             <input type="text" id="username" placeholder="Digite seu nome de usuário">
             <input type="password" id="password" placeholder="Digite sua senha">
@@ -26,15 +27,17 @@
             var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
 
-            // Claves correctas para la simulación
+            // Valores correctos para login
             var correctUsername = "admin";
             var correctPassword = "admin123";
 
-            // Lógica de verificación de usuario y contraseña
+            // Simulación de verificación (sin ningún tipo de protección contra inyección SQL)
             if (username === correctUsername && password === correctPassword) {
+                // Cuando se ingresa el nombre de usuario y contraseña correctos, pasa al siguiente nivel
                 document.getElementById("response").innerHTML = "Acesso permitido! Desbloqueando o próximo nível...";
-                window.location.href = "excursiones.html"; // Redirige al siguiente nivel con las excursiones
+                window.location.href = "excursiones.html"; // Redirige a la página de excursiones
             } else {
+                // Si las credenciales no son correctas, muestra un mensaje de error
                 document.getElementById("response").innerHTML = "Acesso negado. Tente novamente.";
             }
         }
