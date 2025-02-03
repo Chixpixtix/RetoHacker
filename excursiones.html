@@ -1,4 +1,41 @@
-  <option value="campeche">Campeche (Todos os dias - 07:00 - 17:00)</option>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Excursão</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: limegreen;
+            text-align: center;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        select, button {
+            padding: 10px;
+            margin: 10px;
+            background-color: black;
+            color: limegreen;
+            border: 1px solid limegreen;
+        }
+        button:hover {
+            background-color: limegreen;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Selecione sua Excursão</h1>
+        <select id="excursionSelect">
+            <option value="city_tour">City Tour (Seg, Qua, Sáb - 08:00 - 17:00)</option>
+            <option value="bombinhas">Bombinhas (Seg, Qua, Sex - 07:00 - 18:00)</option>
+            <option value="camboriu">Camboriú (Ter, Sex - 07:30 - 18:00)</option>
+            <option value="guarda">Guarda do Embaú (Ter, Sáb - 08:00 - 18:00)</option>
+            <option value="campeche">Campeche (Todos os dias - 07:00 - 17:00)</option>
             <option value="beto_carrero">Beto Carrero (Todos os dias - 07:00 - 21:00)</option>
             <option value="barco_pirata">Barco Pirata (4 horas de duração)</option>
         </select>
@@ -14,4 +51,3 @@
     </script>
 </body>
 </html>
-
