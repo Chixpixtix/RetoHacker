@@ -53,6 +53,13 @@ button {
     font-family: 'Share Tech Mono', monospace;
     cursor: pointer;
     transition: 0.3s;
+} 
+
+.mensagem {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00ff00; /* Verde neón para mantener el estilo hacker */
 }
 
 button:hover {
