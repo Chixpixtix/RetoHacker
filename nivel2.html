@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Hacker - Nível 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="terminal">
+        <h1>🔓 Desafio Hacker - Nível 2</h1>
+        <p>Vulnerabilidade: Injeção SQL</p>
+        <p>Descubra a chave para passar para o próximo nível.</p>
+
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Digite seu nome de usuário">
+            <input type="password" id="password" placeholder="Digite sua senha">
+            <button type="button" onclick="checkLogin()">Entrar</button>
+        </form>
+
+        <p id="response"></p>
+    </div>
+
+    <script>
+        function checkLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Claves correctas para la simulación
+            var correctUsername = "admin";
+            var correctPassword = "admin123";
+
+            // Lógica de verificación de usuario y contraseña
+            if (username === correctUsername && password === correctPassword) {
+                document.getElementById("response").innerHTML = "Acesso permitido! Desbloqueando o próximo nível...";
+                window.location.href = "excursiones.html"; // Redirige al siguiente nivel con las excursiones
+            } else {
+                document.getElementById("response").innerHTML = "Acesso negado. Tente novamente.";
+            }
+        }
+    </script>
+</body>
+</html>
